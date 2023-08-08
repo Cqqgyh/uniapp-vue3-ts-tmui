@@ -46,14 +46,10 @@
   </tm-app>
 </template>
 <script lang="ts" setup>
-import { ref, getCurrentInstance } from 'vue'
-import { onShow, onLoad } from '@dcloudio/uni-app'
+import { ref } from 'vue'
 import tmApp from '@/tmui/components/tm-app/tm-app.vue'
-import tmSheet from '@/tmui/components/tm-sheet/tm-sheet.vue'
-import tmText from '@/tmui/components/tm-text/tm-text.vue'
 import tmTabbar from '@/tmui/components/tm-tabbar/tm-tabbar.vue'
 import tmTabbarItem from '@/tmui/components/tm-tabbar-item/tm-tabbar-item.vue'
-
 const acc = ref(1)
 
 function laodingfun(val: string) {
