@@ -39,6 +39,7 @@ specifiers:
   husky: ^8.0.3
   inquirer: 8.0.0
   lint-staged: ^13.2.0
+  luch-request: ^3.1.1
   mini-types: ^0.1.7
   miniprogram-api-typings: ^3.9.0
   npm-run-all: ^4.1.5
@@ -73,6 +74,7 @@ dependencies:
   '@dcloudio/uni-mp-weixin': registry.npmmirror.com/@dcloudio/uni-mp-weixin/3.0.0-3080720230703001_vue@3.2.47
   '@dcloudio/uni-quickapp-webview': registry.npmmirror.com/@dcloudio/uni-quickapp-webview/3.0.0-3080720230703001_vue@3.2.47
   echarts: registry.npmmirror.com/echarts/5.4.2
+  luch-request: registry.npmmirror.com/luch-request/3.1.1
   pinia: registry.npmmirror.com/pinia/2.0.33_hmuptsblhheur2tugfgucj7gc4
   pinia-plugin-persistedstate: registry.npmmirror.com/pinia-plugin-persistedstate/3.2.0_pinia@2.0.33
   vue: registry.npmmirror.com/vue/3.2.47
@@ -3330,6 +3332,12 @@ packages:
       enabled: registry.npmmirror.com/enabled/2.0.0
       kuler: registry.npmmirror.com/kuler/2.0.0
     dev: true
+
+  registry.npmmirror.com/@dcloudio/types/2.6.12:
+    resolution: {integrity: sha512-mrCMwcINy1IFjU9VUqLeWBkj404yWs5paLDttBcA+eqUjanuUQbBcTVPqlrGgkyzLXDcV2oDDZRSNxNpXi4kMQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@dcloudio/types/-/types-2.6.12.tgz}
+    name: '@dcloudio/types'
+    version: 2.6.12
+    dev: false
 
   registry.npmmirror.com/@dcloudio/types/3.3.2:
     resolution: {integrity: sha512-O+7M55RXqYJMCTh3MC86IGJvDPTR+v214yUeaoz1YUIHa2gJdgObs4RRwfAwZoLMtdoZ9J5BElZZqRy5oi+UTg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@dcloudio/types/-/types-3.3.2.tgz}
@@ -12171,6 +12179,14 @@ packages:
     dependencies:
       yallist: registry.npmmirror.com/yallist/4.0.0
     dev: true
+
+  registry.npmmirror.com/luch-request/3.1.1:
+    resolution: {integrity: sha512-p7+mlcEtgRcd0OfXC4XZbyiwSr1XgCeqNT7LlVUjnk7InYl/8d5Rk7BUqAYNA2WRafI1wRIUQWRWZRpeUwWR0w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/luch-request/-/luch-request-3.1.1.tgz}
+    name: luch-request
+    version: 3.1.1
+    dependencies:
+      '@dcloudio/types': registry.npmmirror.com/@dcloudio/types/2.6.12
+    dev: false
 
   registry.npmmirror.com/magic-string/0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/magic-string/-/magic-string-0.25.9.tgz}
