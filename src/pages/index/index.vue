@@ -47,9 +47,6 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
-import tmApp from '@/tmui/components/tm-app/tm-app.vue'
-import tmTabbar from '@/tmui/components/tm-tabbar/tm-tabbar.vue'
-import tmTabbarItem from '@/tmui/components/tm-tabbar-item/tm-tabbar-item.vue'
 const acc = ref(1)
 
 function laodingfun(val: string) {
