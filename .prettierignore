@@ -7,4 +7,4 @@
 **/*.sh
 
 /public/*
-tmui/*
+src/tmui/*
