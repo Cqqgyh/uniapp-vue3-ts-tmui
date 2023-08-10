@@ -12,7 +12,7 @@ export function getCurrentPageInfo(): { route: string; pageInfo: any; fullPath: 
   }
   // uniapp+vue3中存在bug，小程序不能实时获取到fullPath，需要延迟获取
   setTimeout(() => {
-    returnObj.fullPath = currentPage.$page.fullPath
+    returnObj.fullPath = (currentPage as any).$page.fullPath
   }, 0)
   return returnObj
 }
