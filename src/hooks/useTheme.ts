@@ -19,16 +19,7 @@ export const useTheme = () => {
         title: '颜色不能为空'
       })
     }
-    const existColor = tmPiniaStore.tmStore.colorList.find((item) => item.value === color)
-    color = existColor ? existColor.value : color
     tmPiniaStore.setTmVuetifyAddTheme(`name-${color}`, color)
-    setTimeout(() => {
-      uni.setTabBarStyle({
-        color: '#bfbfbf',
-        backgroundColor: '#ffffff',
-        selectedColor: color
-      })
-    }, 1000)
   }
   /**
    * @description: 通过颜色主题名称切换主题颜色
