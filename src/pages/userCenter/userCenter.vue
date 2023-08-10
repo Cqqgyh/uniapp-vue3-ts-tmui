@@ -1,6 +1,6 @@
 <template>
   <tm-app>
-    <view>home</view>
+    <view>userCenter</view>
     <tm-button @click="demo" :margin="[10]" :shadow="0" size="large" label="按钮"></tm-button>
     <tabbar-nav></tabbar-nav>
   </tm-app>
@@ -15,10 +15,4 @@ function demo() {
 }
 </script>
 
-<style scoped>
-.de {
-  //color: rgba(1, 99, 255, 1);
-  //color: rgba(117, 117, 117, 1);
-  color: rgba(254, 166, 0, 1);
-}
-</style>
+<style scoped></style>
