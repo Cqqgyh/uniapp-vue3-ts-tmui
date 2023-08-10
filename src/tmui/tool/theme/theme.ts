@@ -22,7 +22,10 @@ try{
 let theme = uni?.$tm?.config?.theme?{...uni.$tm.config.theme}:localTheme;
 
 var colors: Array<colorThemeType> = [];
-var colorObj: any = {
+var colorObj: any = uni.getStorageSync("colorArrayList").length ? {...uni.getStorageSync("colorArrayList").reduce((pre:any,cur:any) => {
+		pre[cur.name] = cur.value;
+		return pre;
+	},{}),...theme} : {
 	red: '#FE1C00',
 	pink: '#CA145D',
 	purple: '#A61BC3',
@@ -131,7 +134,7 @@ class themeColors {
 		color.rgba = rgba;
 		color.hsla = colortool.rgbaToHsla(rgba);
 		this.colors.push(color);
-		
+
 		return this.colors;
 	}
 	public del(colorName: string) {
@@ -175,7 +178,7 @@ class themeColors {
 			console.error('主题不存在，默认为primary');
 			config.colorname = 'primary';
 		}
-		
+
 		//当前颜色对象。
 		let nowColor = { ...this.colors[index] };
 		config.borderWidth = isNaN(parseInt(String(config['borderWidth']))) ? 0 : config['borderWidth']??0;
@@ -376,8 +379,8 @@ class themeColors {
 			}else{
 				addling = -37
 			}
-			
-	
+
+
 			//先计算渐变的亮色系。
 			// 先算白或者黑
 			// 如果是白
@@ -413,17 +416,17 @@ class themeColors {
 					liner_color_2.l = 44;
 
 				} else if (config.linearDeep == 'dark') {
-					
+
 					liner_color_2.s = 90;
 					liner_color_2.l = 26;
-					
+
 					liner_color_1.s = 90;
 					liner_color_1.l = 50;
 				} else if (config.linearDeep == 'accent') {
 					liner_color_1.h -= 0;//色相需要往前偏移加强色系
 					liner_color_1.s = 90;//饱和度需要加强
 					liner_color_1.l = 54;
-					
+
 					liner_color_2.h -= addling;//偏移30度的色相搭配色进行渐变
 					liner_color_2.s = 90;//饱和度需要加强
 					liner_color_2.l = 54;
@@ -471,7 +474,7 @@ class themeColors {
 
 		css.textColor = colortool.rgbaToCss(colortool.hslaToRgba(txcolor));
 		if (config.dark) {
-			
+
 			if (nowColor.hsla.h == 0 && nowColor.hsla.s == 0) {
 				css.border = colortool.rgbaToCss(colortool.hslaToRgba({ ...nowColor.hsla, l: 12 }));
 			}else{
@@ -490,7 +493,7 @@ class themeColors {
 				}else if(!config.text&&!config.outlined&&config.borderWidth>0){
 					css.border = colortool.rgbaToCss(colortool.hslaToRgba({ ...nowColor.hsla, l: bghsl.l - 3 }));
 				}
-	
+
 			}
 			css.border = config.borderColor||css.border
 		}
@@ -521,7 +524,7 @@ class themeColors {
 			let str = '-' + config.borderDirection;
 			css.borderCss[`border${str}`] = bcss;
 		}
-		
+
 		return css;
 	}
 }
